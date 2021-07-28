@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         nextButton = (Button) findViewById(R.id.NextButton);
         score = 0;
         currentQindex = 0;
-        q1 = new Question("LA is a state", false);
-        q2 = new Question("Maryland is a state" , true);
-        q3 = new Question("Miami is a state", false);
-        q4 = new Question("Maine is a state", true);
-        q5 = new Question("Las Vegas is a state", false);
+        q1 = new Question(getString(R.string.q1), false);
+        q2 = new Question(getString(R.string.q2) , true);
+        q3 = new Question(getString(R.string.q3), false);
+        q4 = new Question(getString(R.string.q4), true);
+        q5 = new Question(getString(R.string.q5), false);
         questions = new Question[]{q1,q2,q3,q4,q5};
         currentQ = questions[0];
 
@@ -50,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 String text;
                 if (currentQ.isCorrectAnswer() == true){
-                    text = "Nice Job!";
+                    text = getString(R.string.right_message);
+                    score +=1;
                 }
                 else {
-                    text = "Sorry, try Again!";
+                    text = getString(R.string.wrong_message);
                 }
 
                 Context context = getApplicationContext();
@@ -70,10 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
                 String text;
                 if (currentQ.isCorrectAnswer() == false){
-                    text = "Nice Job!";
+                    text = getString(R.string.right_message);
                 }
                 else {
-                    text = "Sorry, try Again!";
+                    text = getString(R.string.wrong_message);
                 }
 
 

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Quiz App</string>
+        <string name="trueB">True</string>
+        <string name="falseB">False</string>
+    <string name="state_quiz">State Quiz</string>
+    <string name="next">Next</string>
+    <string name="wrong_message">Sorry, try Again!</string>
+    <string name="right_message">Nice Job!</string>
+    <string name="q1">LA is a state</string>
+    <string name="q2">Maryland is a state</string>
+    <string name="q3">Miami is a state</string>
+    <string name="q4">Maine is a state</string>
+    <string name="q5">Las Vegas is a state</string>
+
+
+
 </resources>

@@ -11,7 +11,7 @@ android:gravity="center"
 
 android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:text="State Quiz"
+    android:text="@string/state_quiz"
     android:id="@+id/Question"
 
 />
@@ -20,7 +20,7 @@ android:layout_height="wrap_content"
 
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:text="True"
+    android:text="@string/trueB"
     android:id="@+id/TrueButton"
 
 
@@ -29,7 +29,7 @@ android:layout_height="wrap_content"
 <Button
 android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:text="False"
+    android:text="@string/falseB"
     android:textSize="12pt"
     android:id="@+id/FalseButton"
 
@@ -38,7 +38,7 @@ android:layout_height="wrap_content"
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:id="@+id/NextButton"/>
 
 </LinearLayout>
