@@ -89,9 +89,21 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
-                intent.putExtra("scoreLBL", score);
-                startActivity(intent);
+
+                if (currentQindex < 4)
+                {
+                    currentQindex +=1;
+                    currentQ = questions[currentQindex];
+                    question.setText(currentQ.getQuestionText());
+                }
+
+                else{
+
+                    Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                    intent.putExtra("scoreLBL", score);
+                    startActivity(intent);
+
+                }
             }
         });
 
