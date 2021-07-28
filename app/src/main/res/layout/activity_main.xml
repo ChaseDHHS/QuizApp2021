@@ -11,7 +11,7 @@ android:gravity="center"
 
 android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:text="@string/state_quiz"
+    android:textSize="24pt"
     android:id="@+id/Question"
 
 />
@@ -21,6 +21,7 @@ android:layout_height="wrap_content"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
     android:text="@string/trueB"
+    android:textSize="12pt"
     android:id="@+id/TrueButton"
 
 
@@ -39,6 +40,7 @@ android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
+        android:textSize="12pt"
         android:id="@+id/NextButton"/>
 
 </LinearLayout>

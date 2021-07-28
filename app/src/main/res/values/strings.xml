@@ -2,7 +2,7 @@
     <string name="app_name">Quiz App</string>
         <string name="trueB">True</string>
         <string name="falseB">False</string>
-    <string name="state_quiz">State Quiz</string>
+    <string name="state_quiz">States Quiz</string>
     <string name="next">Next</string>
     <string name="wrong_message">Sorry, try Again!</string>
     <string name="right_message">Nice Job!</string>
