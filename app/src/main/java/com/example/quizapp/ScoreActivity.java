@@ -22,6 +22,7 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
 
         scoreTV = (TextView) findViewById(R.id.scoreTV);
+        emailBTN = (Button) findViewById(R.id.emailBTN);
         incomingIntent = getIntent();
         score = incomingIntent.getIntExtra("scoreLBL", 0);
 
