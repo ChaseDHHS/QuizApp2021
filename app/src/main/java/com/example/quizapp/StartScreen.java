@@ -30,72 +30,35 @@ public class StartScreen extends AppCompatActivity {
         Intent intent = new Intent(StartScreen.this, MainActivity.class);
         startActivity(intent);
     }
-}
 */
-
 package com.example.quizapp;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.net.Uri;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-
-        import org.w3c.dom.Text;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class StartScreen extends AppCompatActivity {
-
-    // declaring variables
-    TextView scoreTV;
-    Button sendScoreBTN;
-    int score;
-    String emailMessage;
+    Button startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_start_screen);
+        startButton = (Button) findViewById(R.id.StartButton);
 
-        // retrieving the "int extra" (i.e. score) we put into the intent
-        // when we started this activity
-        Intent incomingIntent = getIntent();
-        score = incomingIntent.getIntExtra("score", 0);
 
-        // inflating UI elements and initializing variables
-        scoreTV = (TextView) findViewById(R.id.scoreTV);
-        sendScoreBTN = (Button) findViewById(R.id.sendScoreBTN);
-        emailMessage = getString(R.string.emailMessage) + score;
-
-        //concatenating the string score with the numerical score
-        scoreTV.setText(getString(R.string.score_TV_starter_text) + score);
-
-        // implicit intent to send email
-        // each student should use their own email address,
-        // or possibly theirs plus the teacher's email
-        sendScoreBTN.setOnClickListener(new View.OnClickListener() {
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String [] addresses = new String[] {"yates.code@gmail.com"};
-                String subject = getString(R.string.score_email_subject);
-                composeEmail(addresses, subject, emailMessage);
+                openActivityStartScreen();
             }
         });
-
     }
-
-    // helper method to compose and send email, adapted from
-    // https://developer.android.com/guide/components/intents-common
-    private void composeEmail(String[] addresses, String subject, String body) {
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, body);
-        if (emailIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(emailIntent);
-        }
+    private void openActivityStartScreen() {
+        Intent intent = new Intent(StartScreen.this, MainActivity.class);
+        startActivity(intent);
     }
 }
