@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,9 +26,15 @@ public class MainActivity extends AppCompatActivity {
     Question q1, q2, q3, q4, q5, currentQ;
     Question [] questions;
     int currentQindex;
+    ImageView imageIC;//added for images
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //added for images
+        imageIC = (ImageView) findViewById(R.id.imageIcon);
+        int[] images = {R.drawable.baltimore, R.drawable.las_vegas, R.drawable.los_angelas, R.drawable.maine, R.drawable.miami };
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -44,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         q5 = new Question(getString(R.string.q5), false);
         questions = new Question[]{q1,q2,q3,q4,q5};
         currentQ = questions[0];
+        imageIC.setImageResource(images[currentQindex]);
 
         trueButton.setOnClickListener(new View.OnClickListener() {
 
