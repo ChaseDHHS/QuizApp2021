@@ -44,13 +44,12 @@ android:layout_height="wrap_content"
         android:textSize="12pt"
         android:id="@+id/NextButton"
 
-        imageIC.setImageResource(images[currentQindex]);  //to add pictures - this also goes in the next button’s code
     />
 
     <ImageView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/baltimore.png"
+        android:id="@+id/picture"
         />
 
 

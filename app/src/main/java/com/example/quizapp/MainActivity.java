@@ -27,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
     Question [] questions;
     int currentQindex;
     ImageView imageIC;//added for images
-
+    int[] images = {R.drawable.baltimore, R.drawable.las_vegas, R.drawable.los_angelas, R.drawable.maine, R.drawable.miami };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //added for images
-        imageIC = (ImageView) findViewById(R.id.imageIcon);
-        int[] images = {R.drawable.baltimore, R.drawable.las_vegas, R.drawable.los_angelas, R.drawable.maine, R.drawable.miami };
+        imageIC = (ImageView) findViewById(R.id.picture);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -104,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
                     currentQindex +=1;
                     currentQ = questions[currentQindex];
                     question.setText(currentQ.getQuestionText());
+
+                    imageIC.setImageResource(images[currentQindex]);
+
                 }
 
                 else{
